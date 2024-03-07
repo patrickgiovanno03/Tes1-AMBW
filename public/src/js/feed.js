@@ -28,7 +28,6 @@ function updateUI(data) {
     if (i%4==3 || i==data.length-1) {
       cardWrapper += '</div>';
     }
-  //   // createCard(data[i]);
   }
   sharedMomentsArea.innerHTML += (cardWrapper);
 }
@@ -51,6 +50,7 @@ fetch(url)
   });
 
 if ('indexedDB' in window) {
+    // alert("tes")
   readAllData('workouts')
     .then(function(data) {
       if (!networkDataReceived) {
